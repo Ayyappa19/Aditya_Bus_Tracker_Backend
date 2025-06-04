@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: bus_tracking_backend
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node app.js
