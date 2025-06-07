@@ -1,3 +1,4 @@
+require('dotenv').config();
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -25,12 +26,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use("/",ApiRouter)
 
-var port = 9000;
+var port = process.env.PORT || 9000;
 app.listen(port,function(){
-  console.log("Server is Running")
+  console.log(`Server is Running on port ${port}`)
 })
 
-mongoose.connect("mongodb+srv://Ayyappa:ayyappa_19@cluster0.kxnj3.mongodb.net/")
+mongoose.connect(process.env.MONGO_URI)
 .then(resp=>{
   console.log("DB Connected Successfully")
 })

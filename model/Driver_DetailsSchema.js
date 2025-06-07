@@ -22,6 +22,6 @@ const Driver_details= new mongoose.Schema({
      },
     driverImage:{
         type:String
-   }
+   } 
 })
 module.exports = mongoose.model("Driver_details",Driver_details);

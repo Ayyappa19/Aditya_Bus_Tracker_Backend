@@ -14,8 +14,8 @@ const mailSender = async(req, res) => {
            user: 'yelugubantiayyappaswamy@gmail.com',
             pass: 'ffgh hgcr jyrp pljk'
         }
-    })   
 
+    })   
     const MailOptions = {
         from: 'yelugubantiayyappaswamy@gmail.com',
         to: req.body.email,
